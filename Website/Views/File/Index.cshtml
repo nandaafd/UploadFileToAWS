@@ -1,0 +1,22 @@
+﻿@model List<mFile>
+@{
+}
+<a asp-controller="File" asp-action="Add">Add</a>
+<table class="table">
+    <thead>
+        <tr>
+            <td>name</td>
+            <td>File</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Filepath</td>
+            </tr>
+            
+        }
+    </tbody>
+</table>
